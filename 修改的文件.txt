@@ -1,0 +1,9 @@
+app/features/settings/components/SettingsDrawer.js
+app/features/settings/actions.js
+app/features/settings/actionTypes.js
+app/features/settings/reducer.js
+app/features/conference/components/Conference.js
+app/features/recent-list/styled/ConferenceCard.js
+app/features/recent-list/styled/Label.js
+app/features/welcome/styled/Label.js
+app/features/welcome/styled/Wrapper.js
