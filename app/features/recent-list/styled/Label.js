@@ -3,6 +3,6 @@
 import styled from 'styled-components';
 
 export default styled.span`
-    color: black;
+    color: white;
     padding: 1em;
 `;

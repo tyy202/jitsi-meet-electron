@@ -118,7 +118,7 @@ class RecentList extends Component<Props, *> {
                 </TruncatedText>
                 <Button
                     appearance = 'subtle'
-                    iconBefore = { <CrossIcon primaryColor = 'black' /> }
+                    iconBefore = { <CrossIcon primaryColor = 'white' /> }
                     onClick = { this._onRemoveConference(conference) }
                     spacing = 'none' />
             </ConferenceCard>

@@ -224,7 +224,6 @@ class Conference extends Component<Props, State> {
      * @returns {void}
      */
     _loadConference() {
-        console.log("_loadConference");
         //SetBaseParam
         const url = new URL(this._conference.room, this._conference.serverURL);
         const roomName = url.pathname.split('/').pop();
@@ -282,7 +281,6 @@ class Conference extends Component<Props, State> {
                 this._onVideoConferenceJoined(conferenceInfo);
             }
         );
-
 
         const { RemoteControl,
             setupScreenSharingRender,
@@ -433,7 +431,7 @@ class Conference extends Component<Props, State> {
     }
 
     /**
-     * è®¾ç½®Token
+     * ÉèÖÃToken
      * @param appId
      * @param appKey
      * @param avatar
@@ -443,7 +441,7 @@ class Conference extends Component<Props, State> {
     {
         return jwt.sign(
             {
-                // tokenæ•°æ®
+                // tokenÊı¾İ
                 aud:'jitsi',
                 sub:host,
                 room:'*',
@@ -453,12 +451,12 @@ class Conference extends Component<Props, State> {
                     email:email
                 }
             },
-            appKey, // å¯†é’¥
+            appKey, // ÃÜÔ¿
             {
-                //å‚æ•° options
-                algorithm: "HS256", // åŠ å¯†ç®—æ³•   å¯¹ç§°åŠ å¯†ç®—æ³•
-                issuer: appId, // ç­¾å‘äºº
-                expiresIn: 60*60*24, // è¿‡æœŸæ—¶é—´   å•ä½ï¼šs
+                //²ÎÊı options
+                algorithm: "HS256", // ¼ÓÃÜËã·¨   ¶Ô³Æ¼ÓÃÜËã·¨
+                issuer: appId, // Ç©·¢ÈË
+                expiresIn: 60*60*24, // ¹ıÆÚÊ±¼ä   µ¥Î»£ºs
             }
         );
     }
@@ -482,7 +480,6 @@ class Conference extends Component<Props, State> {
  * @returns {Props}
  */
 function _mapStateToProps(state: Object) {
-    console.log("_mapStateToProps"+ this.state);
     return {
         _alwaysOnTopWindowEnabled: getSetting(state, 'alwaysOnTopWindowEnabled', true),
         _disableAGC: state.settings.disableAGC,
